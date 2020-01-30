@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[실습] 회의록</title>
+    <style>
+        h2{color: red; text-align: center;}
+        .blue-color{color: blue;}
+    </style>
+</head>
+<body>
+
+    <!--
+        방법1: HTML class 선언 적게 하고 CSS 많이 언급
+        방법2: HTML class 선언 많게 하고 CSS 적게 언급
+     -->
+
+    <!-- 회의 제목 -->
+    <div>
+        <h1>회의 이름</h1>
+        <ul>
+            <li>2020년 1월 30일/</li>
+            <li>오후 6시 15분/</li>
+            <li>
+                <address>
+                    <span>서울특별시 마포구 SBS프리즘타워1 4층</span>
+                    <a href="url">(위치 바로 가기 링크)</a>
+                </address>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 회의 내용 -->
+    <div>
+        <!-- 참석자 -->
+        <div>
+            <h2 class="blue-color">참석자</h2>
+            <ul>
+                <li>참석자 1</li>
+                <li>참석자 2</li>
+                <li>참석자 3</li>
+            </ul>
+        </div>
+        <!-- /참석자 -->
+
+        <div>
+            <h2 class="blue-color">회의 안건</h2>
+            <div>
+                <h3>지난 회의 팔로우업</h3>
+                <ol>
+                    <li>
+                        <p>여기에 텍스틀 입력하세요.</p>
+                        <div>
+                            <img src="../images/flow_chart.png" alt="플로우 차트">
+                        </div>
+                    </li>
+                    <li>
+                        <p><mark>여기에 텍스트를 입력하세요.</mark> 여기에 텍스트를 입력하세요.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h2 class="blue-color">새 비지니스</h2>
+            <ul>
+                <li>여기에</li>
+                <li>
+                    <p>여기에</p>
+                    <div>
+                        <img src="../images/burndown_chart.png" alt="번다운 차트">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="blue-color">메모</h2>
+            <ul>
+                <li>여기에</li>
+                <li>
+                    <span>여기에</span>
+                    <ol>
+                        <li>여기에</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="blue-color">조치 사항</h2>
+            <ul>
+                <li>
+                    <strong>여기에</strong>여기에
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 style="color: red;">다음 주 회의 안건</h2>
+            <p>여기에 <i>여기에</i></p>
+        </div>
+    </div>
+
+</body>
+</html>
