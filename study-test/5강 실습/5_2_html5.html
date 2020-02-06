@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML5</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		ul, li{list-style: none;}
+		img{width: 100%; vertical-align: top;}
+		.hidden{position: absolute; left: -10000px; top: auto; height: 1px; overflow: hidden;}
+		.inner-wrap{position: relative; width: 90%; margin: 0 auto;}
+		.inner-wrap::after{content: ''; display: table; clear: both;}
+		.header{position: fixed; top: 0; left: 0; right: 0; z-index: 1; padding: 30px 0; background-color: #e74c3c;}
+		.header h1, .gnb{float: left;}
+		.header h1 svg{background-color: #7f8c8d;}
+		.main{padding: 98px 0 25px; background-color: #fff200; font-size: 0;}
+		.footer{height: 50px; background-color: #130f40; color: #fff; text-align: center;}
+		.gnb{margin-left: 20px; padding: 0 10px; background-color: #f39c12; text-align: center;}
+		.gnb ul{font-size: 0;}
+		.gnb ul li{display: inline-block; margin: 0 10px; vertical-align: middle;}
+		.gnb ul li a{display: block; padding: 0 20px; font-size: 14px; line-height: 43px;}
+		section, aside{display: inline-block; padding: 25px; font-size: 14px; vertical-align: top;}
+		section{width: calc(75% - 75px); margin-left: 25px; background-color: #2ecc71;}
+		aside{position: fixed; top: 123px; right: 0; width: calc(25% - 50px); background-color: #9b59b6;}
+		article{padding: 25px; background-color: #3498db;}
+		section, article + article{margin-top: 25px;}
+		figure{padding: 25px; background-color: #000;}
+		figcaption{margin-top: 10px; color: #fff; text-align: center;}
+		mark{background-color: #218c74; color: #fff;}
+		.color-pallete{position: fixed; bottom: 10px; right: 10px; z-index: 10; padding: 10px; background-color: #fff; font-size: 0;}
+		.color-pallete li + li{margin-top: 5px;}
+		.color-pallete li:nth-child(8){padding-top: 5px; margin-top: 5px; border-top: 1px #000 solid;}
+		.color-pallete i{width: 20px; height: 20px; border-radius: 50%;}
+		.color-pallete i, .color-pallete span{display: inline-block; vertical-align: middle;}
+		.color-pallete span{margin-left: 5px; font-size: 14px;}
+
+		/* ie 호환성을 위해 main tag 사용 시 display: block 필요 */
+		main{display: block;}
+	</style>
+</head>
+<body>
+	<!-- header -->
+	<header id="header" class="header">
+		<div class="inner-wrap">
+			<h1>
+				<!-- svg -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="98" height="20" viewBox="0 0 98 20">
+					<g fill="#FFF" fill-rule="evenodd">
+						<path d="M26.17 2L22.28 13.422l-.489 1.435-.488-1.435L17.415 2h-2.83l-3.889 11.422-.488 1.435-.489-1.435L5.83 2H3l4.893 14.374.002.004c.206.631.69 1.144 1.313 1.414a2.507 2.507 0 0 0 1.999 0 2.356 2.356 0 0 0 1.314-1.415v-.003L16 6.157l3.478 10.217.002.004c.206.631.69 1.144 1.313 1.414a2.507 2.507 0 0 0 1.999 0 2.356 2.356 0 0 0 1.313-1.415l.002-.003L29 2h-2.83zM38.5 15.42c-3.175 0-5.758-2.432-5.758-5.42s2.583-5.42 5.758-5.42c3.13 0 5.681 2.362 5.755 5.29h-.003v.349c-.122 2.887-2.655 5.2-5.752 5.2M47 10c0-4.411-3.813-8-8.5-8-4.687 0-8.5 3.589-8.5 8s3.813 8 8.5 8a8.764 8.764 0 0 0 5.752-2.117V18h2.742v-7.781c.002-.073.006-.146.006-.219M87.5 4.58c2.703 0 4.975 1.763 5.592 4.13H81.908c.617-2.367 2.89-4.13 5.592-4.13zm4.511 8.781c-1.055 1.253-2.684 2.058-4.511 2.058-2.703 0-4.975-1.761-5.592-4.129h11.184l-.002.007h2.797A7.56 7.56 0 0 0 96 10c0-4.411-3.813-8-8.5-8-4.687 0-8.5 3.589-8.5 8s3.813 8 8.5 8c3.412 0 6.358-1.902 7.71-4.639h-3.199zM59.255 2l-3.781 11.431L55 14.863l-.474-1.432L50.746 2H48l4.756 14.377.001.004c.2.63.67 1.142 1.274 1.412a2.372 2.372 0 0 0 1.938 0 2.326 2.326 0 0 0 1.274-1.413l.001-.003L62 2h-2.745zM75.255 2l-3.781 11.431L71 14.863l-.474-1.432L66.746 2H64l4.756 14.377.001.004c.2.63.67 1.142 1.274 1.412a2.373 2.373 0 0 0 1.938 0 2.326 2.326 0 0 0 1.274-1.413l.001-.003L78 2h-2.745z"/>
+					</g>
+				</svg>
+				<!-- /svg -->
+			</h1>
+
+			<!-- nav -->
+			<nav id="gnb" class="gnb">
+				<ul>
+					<li>
+						<a href="#section1">menu 1</a>
+					</li>
+					<li>
+						<a href="#section2">menu 2</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- /nav -->
+		</div>
+	</header>
+	<!-- /header -->
+
+	<!-- main -->
+	<main id="main" class="main">
+		<!-- section -->
+		<section id="section1">
+			<!-- article -->
+			<article>
+				<!-- figure -->
+				<figure>
+					<img src="img_banner_01.jpg" alt="소파에 앉아 잇는 DJ 배철수(왼쪽)와 모델 이현이(오른쪽), 그리고 가운데 놓여진 붉은 기타">
+					<figcaption>디스크쟈키의 잼있는 수다방, <mark>배철수</mark> 잼, 월 오후 9시 50분, MBC</figcaption>
+				</figure>
+				<!-- /figure -->
+			</article>
+			<!-- /article -->
+
+			<!-- article -->
+			<article>
+				<!-- figure -->
+				<figure>
+					<img src="img_banner_01.jpg" alt="소파에 앉아 잇는 DJ 배철수(왼쪽)와 모델 이현이(오른쪽), 그리고 가운데 놓여진 붉은 기타">
+					<figcaption>디스크쟈키의 잼있는 수다방, 배철수 잼, 월 오후 9시 50분, MBC</figcaption>
+				</figure>
+				<!-- /figure -->
+			</article>
+			<!-- /article -->
+		</section>
+		<!-- /section -->
+
+		<!-- section -->
+		<section id="section2">
+			<!-- article -->
+			<article>
+				<!-- figure -->
+				<figure>
+					<img src="img_banner_01.jpg" alt="소파에 앉아 잇는 DJ 배철수(왼쪽)와 모델 이현이(오른쪽), 그리고 가운데 놓여진 붉은 기타">
+					<figcaption>디스크쟈키의 잼있는 수다방, 배철수 잼, 월 오후 9시 50분, MBC</figcaption>
+				</figure>
+				<!-- /figure -->
+			</article>
+			<!-- /article -->
+		</section>
+		<!-- /section -->
+
+		<!-- aside -->
+		<aside>
+			<div style="width: calc(100% - 50px); height: calc(100% - 50px); padding: 25px; background-color: #e84393;">
+				<!-- video -->
+				<video width="100%" height="100%" controls autoplay loop>
+					<source src="movie.mp4" type="video/mp4">
+					<source src="movie.ogg" type="video/ogg">
+				</video>
+				<!-- /video -->
+			</div>
+			<div style="width: calc(100% - 50px); height: calc(100% - 50px); padding: 25px; background-color: #fd79a8;">
+				<audio controls autoplay loop style="width: 100%;">
+					<source src="horse.ogg" type="audio/ogg">
+					<source src="horse.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+		</aside>
+		<!-- /aside -->
+	</main>
+	<!-- /main -->
+
+	<!-- footer -->
+	<footer id="footer" class="footer"></footer>
+	<!-- /footer -->
+
+	<!-- color-pallete -->
+	<div class="color-pallete">
+		<ul>
+			<li>
+				<i style="background-color: #e74c3c"></i><span>header</span>
+			</li>
+			<li>
+				<i style="background-color: #f39c12;"></i><span>nav</span>
+			</li>
+			<li>
+				<i style="background-color: #fff200;"></i><span>main</span>
+			</li>
+			<li>
+				<i style="background-color: #2ecc71;"></i><span>section</span>
+			</li>
+			<li>
+				<i style="background-color: #3498db;"></i><span>article</span>
+			</li>
+			<li>
+				<i style="background-color: #9b59b6;"></i><span>aside</span>
+			</li>
+			<li>
+				<i style="background-color: #130f40;"></i><span>footer</span>
+			</li>
+			<li>
+				<i style="background-color: #7f8c8d;"></i><span>svg</span>
+			</li>
+			<li>
+				<i style="background-color: #000;"></i><span>figure</span>
+			</li>
+			<li>
+				<i style="border: 1px #000 solid; box-sizing: border-box;"></i><span style="background-color: #000; color: #fff;">figcaption</span>
+			</li>
+			<li>
+				<i style="background-color: #e84393;"></i><span>video</span>
+			</li>
+			<li>
+				<i style="background-color: #fd79a8;"></i><span>audio</span>
+			</li>
+			<li>
+				<i style="background-color: #218c74;"></i><span>mark</span>
+			</li>
+		</ul>
+	</div>
+	<!-- /color-pallete -->
+</body>
+</html>

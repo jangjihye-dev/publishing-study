@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+    </header>
+    <main>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>회원가입 양식</legend>
+                    <div>
+                        <input type="text" name="id" placeholder="아이디 (이메일 주소)"> <button type="button">중복확인</button>
+                    </div>
+                    <div>
+                        <input type="password" name="pw" placeholder="비밀번호">
+                    </div>
+                    <div>
+                        <input type="password" name="rePw" placeholder="비밀번호 확인">
+                    </div>
+                    <div>
+                        <input type="text" name="name" placeholder="이름 (실명 입력)">
+                    </div>
+                    <div>
+                        <input type="tel" name="tel" placeholder="휴대전화번호 ('-'제외)"> <button type="button">인증번호 전송</button>
+                    </div>
+                    <div>
+                        <input type="number" name="" placeholder="인증번호 입력">
+                    </div>
+                    <div>
+                        <input type="number" placeholder="생년월일 (8자리 입력)">
+                        <label>
+                            <input type="radio" name="gender" value="female" checked>여성
+                        </label>
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">남성</label>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <label>
+                                    이용약관 동의<input type="checkbox" name="agree_1" value="agree_1" checked>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    개인정보 취급방침 동의<input type="checkbox" name="agree_2" value="agree_2">
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    마케팅 정보 수신 동의<input type="checkbox" name="agree_3" value="agree_3">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="submit">회원가입</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
