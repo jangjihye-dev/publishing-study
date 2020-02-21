@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[실습] 회의록</title>
+    <style>
+        body {
+            min-width: 1024px;
+        }
+        .wrapper {
+            width: 1024px;
+            margin: 0px auto;
+        }
+        .header {
+            background-color:red;
+            text-align: center;
+            height: 100px;
+            ling-height: 100px;
+        }
+        main {
+            background-color:green;
+            min-height: 720px;
+        }
+        section {
+            background-color: yellow;
+        }
+        h2{
+            display: inline-block;
+            padding: 10px;
+            border-bottom: 5px black solid
+        }
+        .one-list > li{
+            display: inline-block;
+            margin: 0 10px
+        }
+        .two-list {
+            font-size:0;
+        }
+        .two-list > li{
+            display: inline-block;
+            width: 50%;
+            font-size: 50px;
+        }
+        .two-list > li:nth-child(3) {
+            display: none;
+        }
+        .next {
+            display:block;
+            color: purple;
+            border-top: 5px black solid;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        방법1: HTML class 선언 적게 하고 CSS 많이 언급
+        방법2: HTML class 선언 많게 하고 CSS 적게 언급
+     -->
+     <div class="wrapper">
+        <!-- 회의 제목 -->
+        <header class="header">
+            <h1><a href="#memo">&lt;회의 이름&gt;</a></h1>
+        </header>
+
+        <!-- 회의 내용 -->
+        <main>
+            <section>
+                <ul class="one-list">
+                    <li>2020년 1월 30일/</li>
+                    <li>오후 6시 15분/</li>
+                    <li>
+                        <address>
+                            <span>서울특별시 마포구 SBS프리즘타워1 4층</span>
+                            <a href="url">(위치 바로 가기 링크)</a>
+                        </address>
+                    </li>
+                </ul>
+            </section>
+            <!-- 참석자 -->
+            <section>
+                <h2 class="blue-color">참석자</h2>
+                <ul class="two-list">
+                    <li>참석자 1</li>
+                    <li>참석자 2</li>
+                    <li>참석자 3</li>
+                </ul>
+            </section>
+            <!-- /참석자 -->
+
+            <section>
+                <h2 class="blue-color">회의 안건</h2>
+                <div>
+                    <h3>지난 회의 팔로우업</h3>
+                    <ol>
+                        <li>
+                            <p>여기에 텍스틀 입력하세요.</p>
+                            <div>
+                                <img src="../../images/flow_chart.png" alt="플로우 차트">
+                            </div>
+                        </li>
+                        <li>
+                            <p><mark>여기에 텍스트를 입력하세요.</mark> 여기에 텍스트를 입력하세요.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section>
+                <h2 class="blue-color">새 비지니스</h2>
+                <ul>
+                    <li>여기에</li>
+                    <li>
+                        <p>여기에</p>
+                        <div>
+                            <img src="../../images/burndown_chart.png" alt="번다운 차트">
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="blue-color" id="memo">메모</h2>
+                <ul>
+                    <li>여기에</li>
+                    <li>
+                        <span>여기에</span>
+                        <ol>
+                            <li>여기에</li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="blue-color">조치 사항</h2>
+                <ul>
+                    <li>
+                        <strong>여기에</strong>여기에
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="next">다음 주 회의 안건</h2>
+                <p>여기에 <i>여기에</i></p>
+            </section>
+        </main>
+    <div>
+</body>
+</html>

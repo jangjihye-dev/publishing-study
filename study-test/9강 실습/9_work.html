@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>[실습] 회의록</title>
+    <style>
+        .header {
+            background-color: red;
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+        }
+        main {
+            background-color: yellow;
+        }
+        section {
+            background-color: green;
+        }
+        .blue-color {
+            color: blue;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .one, .two {
+            display: inline-block;
+            width: 100px;
+        }
+        .three {
+            display: 'none'
+        }
+        .flow_parent_div{
+            text-align: center;
+        }
+        .flow_img {
+            width: 30%;
+            min-width: 100px;
+        }
+        .burndown_chart_img {
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+    <!-- 회의 제목 -->
+    <header class="header">
+        <h1>&lt;회의 이름&gt;</h1>
+    </header>
+    <main>
+    <!-- 회의 내용 -->
+        <!-- 참석자 -->
+        <section>
+            <h2 class="blue-color">참석자</h2>
+            <ul>
+                <li class='one'>참석자 1</li>
+                <li class='two'>참석자 2</li>
+                <li class='hidden'>참석자 3</li>
+            </ul>
+        </section>
+        <!-- /참석자 -->
+
+        <section>
+            <h2 class="blue-color">회의 안건</h2>
+            <div>
+                <h3>지난 회의 팔로우업</h3>
+                <ol>
+                    <li>
+                        <p>여기에 텍스틀 입력하세요.</p>
+                        <div class='flow_parent_div'>
+                            <img class='flow_img' src="../../images/flow_chart.png" alt="플로우 차트">
+                        </div>
+                    </li>
+                    <li>
+                        <p><mark>여기에 텍스트를 입력하세요.</mark> 여기에 텍스트를 입력하세요.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section>
+            <h2 class="blue-color">새 비지니스</h2>
+            <ul>
+                <li>여기에</li>
+                <li>
+                    <p>여기에</p>
+                    <div>
+                        <img class="burndown_chart_img" src="../../images/burndown_chart.png" alt="번다운 차트">
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="blue-color">메모</h2>
+            <ul>3
+                <li>여기에</li>
+                <li>
+                    <span>여기에</span>
+                    <ol>
+                        <li>여기에</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="blue-color hidden">조치 사항</h2>
+            <ul>
+                <li>
+                    <strong>여기에</strong>여기에
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 style="color: red;">다음 주 회의 안건</h2>
+            <p>여기에 <i>여기에</i></p>
+        </section>
+    </main>
+</body>
+</html>

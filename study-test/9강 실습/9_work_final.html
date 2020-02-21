@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[실습] 회의록 1차 고도화</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            height: 100px;
+            text-align: center;
+            background-color: red;
+
+            /* height value랑 같은 값을 주시면 세로 가운데 정렬이 됩니다. */
+            line-height: 100px;
+        }
+
+        .join-list li{
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+
+        .join-list li:nth-child(3){
+            display: none;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>&lt;회의 이름&gt;</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>참석자</h2>
+            <ul class="join-list">
+                <li>참석자 1</li>
+                <li>참석자 2</li>
+                <li>참석자 3</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>회의 안건</h2>
+            <div>
+                <h3>지난 회의 팔로우업</h3>
+                <ol>
+                    <li>
+                        <h4>여기에 텍스트를</h4>
+
+                        <!-- 1번 케이스: img width, height 주는 경우 -->
+                        <div class="flow-chart-wrap" style="text-align: center;">
+                            <img src="flow_chart.png" alt="flow chart" style="width: 30%; min-width: 100px;">
+                        </div>
+
+                        <!-- 2번 케이스: img를 감싸고 있는 부모 엘리먼트에 width, height 주는 경우 -->
+                        <div class="flow-chart-wrap" style="width: 30%; min-width: 100px; margin: 0 auto;">
+                            <img src="flow_chart.png" alt="flow chart" style="width: 100%;">
+                        </div>
+                    </li>
+                    <li>
+                        <h4>
+                            <mark>여기에 텍스트를</mark> 여기에 텍스트를
+                        </h4>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2>새 비즈니스</h2>
+            <ul>
+                 <li>
+                    <span>여기에 텍스트를</span>
+                 </li>
+                 <li>
+                    <span>여기에 텍스트를</span>
+                    <div>
+                        <img src="burndown_chart.png" alt="burndown chart">
+                    </div>
+                 </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>메모</h2>
+            <ul>
+                <li>
+                    <span>여기에</span>
+                </li>
+                <li>
+                    <span>여기에</span>
+                    <ul>
+                        <li>
+                            <span>여기에</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="hidden">
+            <h2>조치 사항</h2>
+            <ol>
+                <li>
+                    <strong>여기에</strong> 여기에
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>다음 주 회의 안건</h2>
+            <p>
+                여기에 <em>여기에</em>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

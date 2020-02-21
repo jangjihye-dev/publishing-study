@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[실습] 회의록 2차 고도화</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            /* height: 100px; */
+            text-align: center;
+            background-color: red;
+
+            /* height value랑 같은 값을 주시면 세로 가운데 정렬이 됩니다. */
+            /* line-height: 100px; */
+        }
+
+        section{
+            padding: 10px;
+        }
+
+
+        .join-list li:nth-child(3){
+            display: none;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+
+
+        /* 10강 */
+        body{
+            min-width: 1024px;
+        }
+
+        .wrap{
+            width: 1024px;
+            margin: 0 auto;
+            background-color: olive;
+        }
+
+        .metadata-list li{
+            display: inline-block;
+            margin: 0 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .h2{
+            display: block;
+            border-top: 5px red solid;
+            color: blue;
+        }
+        h2{
+            display: inline-block;
+            border-bottom: 5px #000 solid;
+        }
+
+
+        main{
+            min-height: 720px;
+        }
+
+        .join-list{
+            /* 참석자 1과 참석자 2 너비를 화면 크기가 아무리 바뀌어도 절반씩 차지하게 해주세요. */
+            font-size: 0;
+        }
+
+        .join-list li{
+            display: inline-block;
+            width: 50%;
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* margin/padding 컴포넌트화 */
+        .mt10{
+            margin-top: 10px;
+        }
+
+        .mt20{
+            margin-top: 20px;
+        }
+
+        .pr50{
+            padding-right: 50px;
+        }
+
+        /* 스카폴딩 */
+        .color-primary{
+            color: #000;
+        }
+
+        /* dry: don't repeat yourself */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>
+                <a href="#memo">&lt;회의 이름&gt;</a>
+            </h1>
+            <ul class="metadata-list">
+                <li>1월</li>
+                <li>6시</li>
+                <li>
+                    <address>
+                        장소
+                        <a href="url">장소</a>
+                    </address>
+                </li>
+            </ul>
+        </header>
+
+        <main>
+            <section>
+                <h2>참석자</h2>
+                <ul class="join-list">
+                    <li>참석자 1</li>
+                    <li>참석자 2</li>
+                    <li>참석자 3</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>회의 안건</h2>
+                <div>
+                    <h3>지난 회의 팔로우업</h3>
+                    <ol>
+                        <li>
+                            <h4>여기에 텍스트를</h4>
+                            <div class="flow-chart-wrap" style="width: 30%; min-width: 100px; margin: 0 auto;">
+                                <img src="flow_chart.png" alt="flow chart" style="width: 100%;">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>
+                                <mark>여기에 텍스트를</mark> 여기에 텍스트를
+                            </h4>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section>
+                <h2>새 비즈니스</h2>
+                <ul>
+                     <li>
+                        <span>여기에 텍스트를</span>
+                     </li>
+                     <li>
+                        <span>여기에 텍스트를</span>
+                        <div>
+                            <img src="burndown_chart.png" alt="burndown chart">
+                        </div>
+                     </li>
+                </ul>
+            </section>
+
+            <section id="memo">
+                <h2>메모</h2>
+                <ul>
+                    <li>
+                        <span>여기에</span>
+                    </li>
+                    <li>
+                        <span>여기에</span>
+                        <ul>
+                            <li>
+                                <span>여기에</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="hidden">
+                <h2>조치 사항</h2>
+                <ol>
+                    <li>
+                        <strong>여기에</strong> 여기에
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2 class="h2">다음 주 회의 안건</h2>
+                <p>
+                    여기에 <em>여기에</em>
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
